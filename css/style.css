@@ -1,0 +1,642 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+
+:root{
+    --orange: #ffa500;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    border:none; outline: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2 linear;
+    scroll-behavior: smooth;
+}
+*::selection{
+    background: var(--orange);
+    color: #fff;
+} /* teqsty nsheluc fony orange, tarery spitak e sarqum   */
+
+
+.btn{
+   display: inline-block;/*dasavorum e irar tak bloki pes nuyn chaperov*/
+   background: var(--orange);
+   color: #fff;
+   cursor: pointer;
+   font-size: 1.5rem;
+   border: .2rem solid var(--orange);
+   padding: 0.5rem 2rem;
+}
+
+.btn:hover{
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+}
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.heading span{
+    font-size:3rem;
+    background: rgba(255, 165, 0, 0.2);
+    padding: .2rem 1rem;
+    border-radius: .5rem;
+    color: var(--orange);
+}
+
+.heading span.space{
+    background: none;
+}
+
+/*=================header=================*/
+
+header{
+    position: fixed;
+    background: #333;
+    top: 0; left: 0;right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+}
+header .logo{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .logo span{
+    color: var(--orange);
+}
+
+
+header .navbar a{
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0 .5rem;
+}
+
+header .navbar a:hover{
+    color: var(--orange);
+}
+header .icons i{
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+header .icons i:hover{
+    color: var(--orange);
+}
+
+#menu-bar{
+    color: #fff;
+    font-size: 2rem;
+    border: .1rem solid #fff;
+    cursor: pointer;
+    border-radius: .5rem;
+    display: none;
+}
+
+header .search_bar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;/*topic 100% ijacrinq*/
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);/*verevi tapancik gicn e*/
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);/*pakum a harcman patuhany display:none-i lav tarberakn e*/
+}
+
+
+header .search_bar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+} 
+
+
+
+
+header .search_bar input{
+    width: 100%;/*mecacnum a minchev verj*/
+    font-size: 1.5rem;
+    padding: .8rem;
+    text-transform: none;
+}
+
+header .search_bar label{
+    color:#fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* =================Login================= */
+
+.login_form{
+    position: fixed;
+    top:-120%; left: 0;/*
+    -120y tanum e 120-ov verev useri u poroli patuhannery
+    */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login_form.active{
+    top: 0;
+} 
+
+
+.login_form form{
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+}
+
+.login_form form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login_form form input[type=email],
+.login_form form input[type=password]{
+    width: 100%;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    font-size: 1.5rem;
+    padding: .7rem;
+    margin: .5rem 0;
+    text-transform: none;
+}
+.login_form form input[type=email]:focus,
+.login_form form input[type=password]:focus{
+    border-color: var(--orange);
+}
+
+.login_form form .btn{
+    width: 100%;
+}
+
+.login_form form p{
+    font-size: 1.5rem;
+    color: #666;
+}
+.login_form form p a{
+    color: var(--orange);
+}
+
+.login_form form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.login_form #form_close{
+    position:absolute;
+    top: 2rem; right: 2rem;
+    color:#fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* =================Home================= */
+
+.home{
+    min-height: 100vh;/*vh=vertical height*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;/*contenty tanum a videoyic verev*/
+    position: relative;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 3rem;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: #fff;
+    padding: 0.5 0;
+}
+
+.home .controls{
+    background: rgba(0, 0, 0, .7);
+    padding: .5rem;
+    border-radius: 2rem;
+    position: relative;
+    top: 10rem;
+}
+.home .controls .vid-btn.active{
+    background: var(--orange);
+}
+
+.home .controls .vid-btn{
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 .1rem;
+}
+
+.home .video_container video{
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*dzgum a nkary kam videon amboxj ekranov*/
+    z-index: -1;/*taki contenty gcum a videoyi vra*/
+}
+
+/*=================Book=================*/
+
+.book .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book .inner .image{
+    width: 49%;
+}
+
+.book .inner .image img{
+    width: 100%;
+}
+
+.book .inner form{
+    width: 49%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);/*a-tapancikutyunn e*/
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.book .inner form .inputbox h3{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.book .inner form .inputbox input{
+    width: 100%;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    font-size: 1.5rem;
+    padding: .6rem;
+    color: #333;
+    text-transform: none;
+}
+
+.book .inner form .btn{
+    margin-top: .5rem;
+}
+
+/* ================= Packages ================= */
+
+.packages .inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.packages .inner .box{
+    width: 23%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.packages .inner .box img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;/*dzmzum a*/
+}
+.packages .inner .box .content{
+padding: 1rem;
+}
+
+.packages .inner .box h3{
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: capitalize;
+
+}
+.packages .inner .box h3 i{
+    color: var(--orange);
+    padding-right: .5rem;
+}
+.packages .inner .box .content p{
+    font-size: 1.2rem;
+    color: #666;
+}
+.packages .inner .box .content .stars i{
+    font-size: 1.2rem;
+    color: var(--orange);
+}
+
+.packages .inner .box .content .price{
+    font-size: 1.3rem;
+    color: #333;
+    padding: .5rem;
+}
+
+.packages .inner .box .content .price span{
+    font-size: 1.1rem;
+    text-decoration: line-through;
+}
+
+/* ================= Services ================= */
+
+.services .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services .inner .box{
+    width: 24%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.services .inner .box i{
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.services .inner .box h3{
+    font-size: 1.7rem;
+    color: #333;
+}
+
+.services .inner .box p{
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.services .inner .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Gallery ==========*/
+
+.gallery .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;/*mijakayqery 1 rem*/
+}
+
+.gallery .inner .box{
+    overflow: hidden;/*taqcnum  a top=-100%-ov pakaci tesaneli masy contenti*/
+    width: 24%;
+    height: 18rem;
+    position: relative;
+}
+
+.gallery .inner .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .inner .box .content{
+    position: absolute;
+    top: -100%; left: 0;/*-100%-y korcnum a kochaky*/
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .inner .box:hover .content{/*kamel .content:hover*/
+    top: 0;
+}
+
+.gallery .inner .box .content h3{
+    font-size: 1.7rem;
+    color: var(--orange);
+}
+
+.gallery .inner .box .content p{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.gallery .inner .box .content .btn{
+    padding-top: .5rem;
+}
+
+/* ========== Contact ==========*/
+
+.contact .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.contact .inner .image{
+    width: 48%;
+}
+
+.contact .inner .img{
+    width: 100%;
+}
+
+.contact .inner form{
+    width: 48%;
+    box-shadow: 0 1rem  2rem rgba(0, 0, 0, .1);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.contact .inner form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .inner form .inputBox input{
+    width: 49%;
+    background: #f7f7f7;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    text-transform: none;
+    color: #333;
+}
+
+.contact .inner form textarea{
+    width: 100%;
+    background: #f7f7f7;
+    font-size: 1.2rem;
+    resize: none;/*chi toxum textareai chaoy poxel*/
+    padding: .5rem;
+    text-transform: none;
+    color: #333;
+}
+
+
+/* ========== Footer ==========*/
+
+.footer{
+    background: #333;
+}
+
+.footer .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer .inner .box{
+    width: 24%;
+}
+
+.footer .inner .box h3{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer .inner .box p{
+    font-size: 1rem;
+    color: #666;
+}
+
+.footer .inner .box a{
+    display: block;/*bloki pes dasavorum a*/
+    color: #fff;
+    padding: .4rem 0;
+}
+
+.footer .inner .box a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.footer .created{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 0.1rem solid rgba(255, 255, 255,.5);
+}
+
+@media(max-width:  1200px) {
+    html{
+        font-size: 90%;
+    }  
+    section{
+        padding: 0.5rem 1%;
+    }
+}
+
+
+@media (max-width: 970px){
+    header #menu-bar{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #333;
+        border-top:.1rem solid rgba(255,255,255,.2);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0 );
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+
+    header .navbar a{
+        display: block;
+        background-color: #222;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+
+    .book .inner{
+        flex-direction: column;
+    }
+    
+    .book .inner form{
+        width: 90%;
+    }
+    .packages .inner .box{
+        width: 48%;
+    }
+
+    .services .inner .box{
+        width: 48%;
+    }
+
+    .gallery .inner .box{
+        width: 48%;
+    }
+
+    .contact .inner{
+        flex-direction: column;
+    }
+
+    .contact .inner form{
+        width: 90%;
+    }
+
+    footer .inner .box{
+        width: 48%;
+    }
+
+}
+
+@media(max-width: 570px){
+    .heading span{
+        padding: 0.4rem;
+    }
+
+    .packages .inner .box{
+        width: 95%;
+    }
+    .services .inner .box{
+        width: 95%;
+    }
+
+    .gallery .inner .box{
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
